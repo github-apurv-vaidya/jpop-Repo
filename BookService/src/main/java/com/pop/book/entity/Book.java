@@ -1,19 +1,37 @@
 package com.pop.book.entity;
-
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "book")
 public class Book {
-private String id;
-private String bookName;
-private String author;
+    @Id
+    private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "name")
+    private String bookName;
 
-    public String getId() {
+    @Column(name = "author")
+    private String author;
+    @Column(name = "price")
+    private String price;
+
+    Book(){
+
+    }
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getBookName() {
