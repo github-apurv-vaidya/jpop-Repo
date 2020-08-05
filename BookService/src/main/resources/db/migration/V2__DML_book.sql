@@ -1,0 +1,1 @@
+insert into book (name,author,price) Values ('Physics','Ramesh','100'),('Chemistry','Raju','1000');
