@@ -24,9 +24,8 @@ add fllowing dependency
  hystrix ,hystrix-dashboard,acturator
  @EnableCircuitbreaker to the application call for enabling circuitbreaker(Hystrix) to the project.
  
-	@hystrixcommand to the method where u need to add fallback method
+		
 	
- 
  @EnableHystrixDashBoard to the application call for enabling hystrix-dashboard to the project.
  
  
@@ -53,6 +52,17 @@ add fllowing dependency
  
 		it allows the hystrix.stream
  ------------------------------------------------------------------------------------------------------------------	
-		
+#Week 4
+Zuul proxy
+add the dependency jar for it register it with eureka, fetch registry from eureka 
+annotation used @enablezuulPROXY and @discoveryClient
+
+
+sleuth and zipkin
+addd the dependecy spring cloud starter sleuth and zipkin 
+ovride the function Sampler.Always...
+download the jar(use can use docker image) of zipkin and run it locally
+application.properties add 
+spring.zipkin.enabled =true and baseUrl=<zipkin url>
 
 		
